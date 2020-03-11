@@ -51,6 +51,9 @@ namespace ConsoleApp1
 
         static int Angle = 0;
 
+        const byte VK_ESCAPE = 0x1B;
+
+
         private void Window_Loaded(object sender)
         {
             var sb = new StringBuilder();
@@ -216,17 +219,17 @@ namespace ConsoleApp1
 
         static void GLKeyDown(byte key, int x, int y)
         {
-            switch((char)key)
+            switch(key)
             {
-                case (char)Keys.Escape:
+                case VK_ESCAPE:
                     Application.Exit();
                     break;
-                case (char)Keys.Left:
+                case (byte)Keys.Left:
                     Angle -= 5; // Уменьшаем угол поворота на 5 градусов
 
                     glutPostRedisplay(); // Перерисовываем окно
                     break;
-                case (char)Keys.Right:
+                case (byte)Keys.Right:
                     Angle += 5; // Увеличиваем угол поворота на 5 градусов
 
                     glutPostRedisplay(); // Перерисовываем окно
