@@ -216,8 +216,12 @@ namespace ConsoleApp1
 
         static void GLKeyDown(byte key, int x, int y)
         {
-            //if(key == )
-            Angle += 5; // Увеличиваем угол поворота на 5 градусов
+            if ((char)key == (char)Keys.Escape)
+                Application.Exit();
+            else if ((char) key == (char)Keys.Right)
+                Angle += 5; // Увеличиваем угол поворота на 5 градусов
+            else if ((char)key == (char)Keys.Left)
+                Angle -= 5; // Увеличиваем угол поворота на 5 градусов
 
             glutPostRedisplay(); // Перерисовываем окно
         }
