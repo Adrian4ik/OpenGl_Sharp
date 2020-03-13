@@ -34,7 +34,8 @@ namespace ConsoleApp1
 
         //https://msdn.microsoft.com/en-us/library/windows/desktop/dn280510(v=vs.85).aspx
         [DllImport("Shcore.dll")]
-        private static extern IntPtr GetDpiForMonitor([In]IntPtr hmonitor, [In]DpiType dpiType, [Out]out uint dpiX, [Out]out uint dpiY);
+        private static extern IntPtr GetDpiForMonitor([In]IntPtr hmonitor, [In]DpiType dpiType, [Out]out uint dpiX,
+            [Out]out uint dpiY);
     }
 
     //https://msdn.microsoft.com/en-us/library/windows/desktop/dn280511(v=vs.85).aspx
